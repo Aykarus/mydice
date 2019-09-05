@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,11 +25,18 @@ public class MainActivity extends AppCompatActivity {
             displayDice();
         }
 
+        Button button = findViewById(R.id.roll_button);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rollDie();
+            }
+        });
 
     }
 
-    public void rollDie(View v){
+    public void rollDie(){
         die1.roll();
         displayDice();
     }
