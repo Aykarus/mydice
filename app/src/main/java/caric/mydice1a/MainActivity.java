@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(savedInstanceState != null){
             die1.setNumber(savedInstanceState.getInt(DIE_1));
+            displayDice();
         }
 
     }
