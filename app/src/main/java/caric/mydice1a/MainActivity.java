@@ -3,9 +3,10 @@ package caric.mydice1a;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,22 +28,17 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.roll_button);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rollDie();
-            }
-        });
+        button.setOnClickListener((view)-> rollDice());
 
     }
 
-    public void rollDie(){
+    public void rollDice(){
         die1.roll();
         displayDice();
     }
 
     private void displayDice() {
-        die1View.setText("" + die1.getNumber());
+        die1View.setText(String.format(Locale.CANADA,"%1d",die1.getNumber()));
     }
 
     @Override
