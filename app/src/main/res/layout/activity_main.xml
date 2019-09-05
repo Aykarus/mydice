@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/gap1"
+        android:onClick="rollDie"
         android:text="@string/roll" />
 
     <Space
